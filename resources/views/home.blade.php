@@ -1,0 +1,1 @@
+<h1 class="text-7xl">Home Page no blade</h1>
