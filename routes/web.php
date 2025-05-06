@@ -20,7 +20,8 @@ Route::get('/', function () {
 
 Route::get('/user',[UserController::class,'getUser']);
 Route::get('/about',[UserController::class,'aboutUser']);
-Route::get('user/{name}',[UserController::class,'getUserName']);
+Route::get('getuser/{name}',[UserController::class,'getUserName']);
+Route::get('admin',[UserController::class,'adminPage']);
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

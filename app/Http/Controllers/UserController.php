@@ -7,12 +7,19 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 { 
     function getUser(){
-        return "Get code step by step";
+        return view('user');
+
     }
     function aboutUser(){
         return "Hello this is hello hello";
     } 
     function getUserName($name){
-        return "this is ". $name;
+       $name="Anil";
+       $users=['hero','sam','peter'];
+       return view('/getUser',['name'=>$name,'users'=>$users]);
+    }
+    
+    function adminPage(){
+        return view("admin.login");
     }
 }
