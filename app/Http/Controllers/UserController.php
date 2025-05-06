@@ -6,20 +6,12 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 { 
-    function getUser(){
-        return view('user');
+
+    function addUser(Request $request){
+        echo $request->username;
+        echo $request->email;
+        echo $request->city;
 
     }
-    function aboutUser(){
-        return "Hello this is hello hello";
-    } 
-    function getUserName($name){
-       $name="Anil";
-       $users=['hero','sam','peter'];
-       return view('/getUser',['name'=>$name,'users'=>$users]);
-    }
-    
-    function adminPage(){
-        return view("admin.login");
-    }
+   
 }
